@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kubernetes Practice</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 th:text="${greeting}">Hi Lokesh Welcome to Kubernetes</h1>
+      <p class="sub">This page is editable — change colors in <code>src/main/resources/static/css/style.css</code></p>
+      <div class="controls">
+        <label>Primary: <span class="var">--primary-color</span></label>
+        <label>Accent: <span class="var">--accent-color</span></label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
