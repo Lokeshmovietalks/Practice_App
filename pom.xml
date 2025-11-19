@@ -48,12 +48,12 @@
 <distributionManagement>
         <snapshotRepository>
                 <id>nexus</id>
-                <url>http://10.0.0.23:8081/repository/Practice_App_Snapshot/</url>
+                <url>http://172.31.21.82:8081/repository/Practice_App_Snapshot/</url>
         </snapshotRepository>
 
         <repository>
                 <id>nexus</id>
-                <url>http://10.0.0.23:8081/repository/Practice_App/</url>
+                <url>http://172.31.21.82:8081/repository/Practice_App/</url>
         </repository>
 </distributionManagement>
   <build>
