@@ -24,7 +24,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]){
                     sh '''
                     echo "Downloading from Nexus"
-                    curl -u "$USER:$PASS" -O http://3.26.34.178:8081/repository/Practice_App_Snapshot/com/example/Practice-app/0.0.1-SNAPSHOT/Practice-app-0.0.1-20251115.035728-1.jar
+                    curl -u "$USER:$PASS" -O http://13.211.53.180:8081/repository/Practice_App_Snapshot/com/example/Practice-app/0.0.1-SNAPSHOT/Practice-app-0.0.1-20251115.035728-1.jar
                     '''
                 }
             }
@@ -34,10 +34,10 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]){
                     sh '''
                     echo "Building Docker Image"
-                    docker build -t $USER/practiceapp:nov15v1 .
+                    docker build -t $USER/practiceapp:nov19v2 .
                     echo "Pushing Image"
                     echo "$PASS" | docker login -u "$USER" --password-stdin
-                    docker push $USER/practiceapp:nov15v1
+                    docker push $USER/practiceapp:nov19v2
                     '''
                 }
             }
